@@ -1,0 +1,201 @@
+/**Header ######################################"""" */
+/* Flip button ============== */
+.flip {
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  perspective: 500px;
+  top: 47%;
+  left: 75%;
+  margin: -24px  0 -80px;
+  border-radius: 10px;
+  
+}
+.back a {
+  text-decoration: none;
+  color: rgb(97, 93, 93);
+  font-family: 'Times New Roman' ,serif;
+}
+.flip .a {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.3s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.flip .a .front,
+.flip .a .back {
+  margin: 0;
+  width: 180px;
+  height: 100px;
+  line-height: 48px;
+  position: absolute;
+  text-align: center;
+  letter-spacing: 0.4em;
+  border-radius: 10px;
+}
+.flip .a .front {
+  background-color: rgb(34, 34, 34);
+  color: #fff;
+  transform: rotateY(0) translateZ(50px);
+}
+.flip .a .back {
+  background-color: #fff;
+  color: rgba(34, 34, 34, 0);
+  transform: rotateX(90deg) translateZ(30px);
+  overflow: hidden;
+}
+.flip .a .back:after {
+  content: "";
+  position: absolute;
+  top: -125%;
+  left: -80%;
+  width: 250%;
+  height: 125%;
+  background: rgb(59, 57, 57);
+  transform: rotate(50deg);
+  transition: all 0.9s ease;
+  transition-delay: 0.15s;
+}
+.flip .a:hover {
+  transform: translateZ(-24px) rotateX(-90deg);
+}
+.flip .a:hover .front {
+  background: #000;
+
+  transition: all 0.8s ease;
+}
+.flip .a:hover .back {
+  color: #222;
+  transition: color 0.4s linear;
+  background: #fff;
+}
+.flip .a:hover .back:after {
+  transform: rotate(6deg) translate(100px, -18px);
+}
+
+/**Profile ######################################"""" */
+
+
+/* imageProfile ============== */
+
+.imageProfile {
+  position: absolute;
+ bottom: -45%;
+  zoom: 70%;
+}
+
+/* Bio & Profession ========= */
+.itemProfile {
+ 
+    box-shadow: -1px -1px 10px 1px green, 1px 1px 10px 1px #0ebac7;
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+    padding: 7px 8px;
+    color: #e76f51;
+    margin-bottom:45px;
+  
+}
+
+#viewProfile {
+
+  width: 80vw;
+  height: 50vh;
+  background-color: rgba(34, 34, 34, 0.637);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: auto ;
+  padding: 5px 5px;
+  gap: 100px;
+  text-align: start;
+  font-size: medium;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  zoom: 90%;
+}
+
+/**Footer ######################################"""" */
+
+
+footer {
+  zoom: 90%;
+ width: 80vw;
+  bottom: 0;
+  margin: auto;
+  
+}
+.footer-bottom {
+  margin-bottom: 20px;
+ 
+
+}
+footer div.social-media-links {
+  background: #323b40;
+  overflow: hidden;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+  text-align: center;
+  height: 80px;
+}
+footer div.social-media-links ul {
+  margin: 0;
+  padding: 0;
+  
+}
+footer div.social-media-links li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+footer div.social-media-links a {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+  border-radius: 4px;
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+  display: inline-block;
+  padding: 35px;
+  position: relative;
+  transition: 0.2s ease-in;
+  height: 25px;
+  width: 25px;
+}
+footer div.social-media-links a svg {
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+}
+footer div.social-media-links a svg.glow path,
+footer div.social-media-links a svg.glow circle {
+  fill: rgba(0, 0, 0, 0);
+}
+footer div.social-media-links a svg path,
+footer div.social-media-links a svg circle {
+  fill: #0096a1;
+  transition: 0.2s ease-in;
+}
+footer div.social-media-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px rgba(14, 186, 199, 0.25), 0 83px 4px 0px rgba(14, 186, 199, 0.95);
+}
+footer div.social-media-links a:hover svg.glow {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  filter: blur(2px);
+}
+footer div.social-media-links a:hover svg.glow path,
+footer div.social-media-links a:hover svg.glow circle {
+  fill: rgba(14, 186, 199, 0.6);
+}
+footer div.social-media-links a:hover svg path,
+footer div.social-media-links a:hover svg circle {
+  fill: #0ebac7;
+}
